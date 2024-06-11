@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSP</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="./img/mspwnbg.png" id="logo_img" /></a>
+    </header>
+    <div class="container">
+      <h1>Preguntas Frecuentes (FAQ)</h1>
+      <h3>Github</h3>
+      <!-- Github -->
+      <div class="faq-item">
+        <div class="faq-question">
+          Me sale "Unable to start codespace" en GitHub
+        </div>
+        <div class="faq-answer">
+          Esta página proporciona respuestas a las preguntas más frecuentes que
+          los usuarios pueden tener.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Me sale "Usage not allowed" en GitHub</div>
+        <div class="faq-answer">
+          Puedes encontrar más información en nuestra sección de Ayuda y en los
+          artículos de nuestro blog.
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Información sobre las horas del codespace
+          </div>
+          <div class="faq-answer">
+            Puedes encontrar más información en nuestra sección de Ayuda y en
+            los artículos de nuestro blog.
+          </div>
+        </div>
+      </div>
+
+      <h3>Errores</h3>
+      <!-- Errores -->
+      <div class="faq-item">
+        <div class="faq-question">
+          Me sale ... failed to open private leg ...
+        </div>
+        <div class="faq-answer">
+          Puedes contactar con soporte enviando un correo electrónico a
+          soporte@example.com o llamando al número 123-456-7890.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Error al verificar el nombre de usuario / Failed to verify username
+        </div>
+        <div class="faq-answer">
+          Puedes encontrar más información en nuestra sección de Ayuda y en los
+          artículos de nuestro blog.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Mi servidor no inicia y/o crashea</div>
+        <div class="faq-answer">
+          Puedes encontrar más información en nuestra sección de Ayuda y en los
+          artículos de nuestro blog.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Tengo error de Dropbox</div>
+        <div class="faq-answer">
+          Puedes encontrar más información en nuestra sección de Ayuda y en los
+          artículos de nuestro blog.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">La IP no me funciona</div>
+        <div class="faq-answer">
+          Puedes encontrar más información en nuestra sección de Ayuda y en los
+          artículos de nuestro blog.
+        </div>
+      </div>
+      <!-- Dudas -->
+      <h3>Dudas</h3>
+      <div class="faq-item">
+        <div class="faq-question">¿Cómo uso tailscale?</div>
+        <div class="faq-answer">
+          Puedes encontrar más información en nuestra sección de Ayuda y en los
+          artículos de nuestro blog.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Cómo uso playit?</div>
+        <div class="faq-answer">
+          Puedes encontrar más información en nuestra sección de Ayuda y en los
+          artículos de nuestro blog.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Cómo me doy OP?</div>
+        <div class="faq-answer">
+          Puedes encontrar más información en nuestra sección de Ayuda y en los
+          artículos de nuestro blog.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿Cuáles son las diferencias entre los túneles?
+        </div>
+        <div class="faq-answer">
+          Puedes encontrar más información en nuestra sección de Ayuda y en los
+          artículos de nuestro blog.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿Cómo uso Dynmap, voicechat u otro servicio que requiera un puerto?
+        </div>
+        <div class="faq-answer">
+          Puedes encontrar más información en nuestra sección de Ayuda y en los
+          artículos de nuestro blog.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Cómo instalo una versión manualmente?</div>
+        <div class="faq-answer">
+          Puedes encontrar más información en nuestra sección de Ayuda y en los
+          artículos de nuestro blog.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Cómo instalo un modpack?</div>
+        <div class="faq-answer">
+          Puedes encontrar más información en nuestra sección de Ayuda y en los
+          artículos de nuestro blog.
+        </div>
+      </div>
+    </div>
+    <h4 id="cr">Made with love by Elyx!</h4>
+    <script>
+      document.querySelectorAll(".faq-question").forEach((item) => {
+        item.addEventListener("click", () => {
+          const answer = item.nextElementSibling;
+          const isVisible = answer.style.display === "block";
+          document
+            .querySelectorAll(".faq-answer")
+            .forEach((answer) => (answer.style.display = "none"));
+          answer.style.display = isVisible ? "none" : "block";
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+body {
+  font-family: "Quicksand";
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  background-image: url("../img/universe.jpg");
+}
+#logo_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  text-align: center;
+  color: #333;
+}
+h3 {
+  text-align: center;
+}
+p {
+  font-weight: bold;
+  line-height: 20px;
+}
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+.faq-question {
+  cursor: pointer;
+  padding: 10px;
+  margin: 0;
+  font-weight: bold;
+  background: #bdbdbd;
+  transition: background 0.5s;
+}
+.faq-question:hover {
+  background: #505050;
+}
+.faq-answer {
+  display: none;
+  transition-duration: 150ms;
+  padding: 10px;
+  margin: 0;
+}
+#cr {
+  text-align: center;
+  color: #eee;
+}
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.modern-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #313131;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.modern-button:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+}
