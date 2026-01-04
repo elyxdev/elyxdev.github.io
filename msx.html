@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MSX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --purple-main: #7b3fe4;
+            --purple-dark: #4b1fa6;
+            --background: #0e0b14;
+            --text-main: #ffffff;
+            --text-muted: #b9b2d8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at top, var(--purple-dark), var(--background));
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 90%;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 60px;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            margin-top: 12px;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(123, 63, 228, 0.4);
+            border-radius: 16px;
+            padding: 35px 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 0 40px rgba(123, 63, 228, 0.35);
+        }
+
+        .card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 26px;
+            background: linear-gradient(135deg, var(--purple-main), #a26bff);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <!-- Logo del proyecto -->
+        <img src="https://minecraft-sx.github.io/img/msx_icon_white.png" alt="MSX Logo">
+        <h1>MSX</h1>
+        <p>Una nueva forma de crear, ejecutar y jugar.</p>
+    </header>
+
+    <section class="options">
+        <div class="card">
+            <!-- Icono Windows -->
+            <img src="https://img.icons8.com/?size=512&id=108792&format=png" alt="Windows">
+            <h2>Windows</h2>
+            <p>Descarga MSX para Windows y ejecútalo de forma local con el máximo rendimiento.</p>
+            <a href="#" class="btn" onclick="obtenerWindows()">Obtener</a>
+        </div>
+
+        <div class="card">
+            <!-- Icono Codespaces -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" alt="Codespaces">
+            <h2>Codespaces</h2>
+            <p>Usa MSX directamente desde la nube, sin instalaciones ni configuraciones.</p>
+            <a href="#" class="btn" onclick="obtenerCodespaces()">Obtener</a>
+        </div>
+    </section>
+
+    <div id="download-message" style="display:none; margin-top:40px; font-size:1.1rem; color:#d7c9ff;">
+        Tu descarga iniciará pronto, gracias por usar MSX 💜
+    </div>
+
+    <footer>
+        Hecho con 💜 por Elyx
+    </footer>
+</div>
+
+<script>
+    function iniciarDescarga(url) {
+        const msg = document.getElementById("download-message");
+        msg.style.display = "block";
+
+        setTimeout(() => {
+            window.location.href = url;
+        }, 2000); // 2 segundos antes de iniciar la descarga
+    }
+
+    function obtenerWindows() {
+        iniciarDescarga("https://minecraft-sx.github.io/releases/MSX%20Launcher.exe");
+    }
+
+    function obtenerCodespaces() {
+        iniciarDescarga("https://minecraft-sx.github.io/releases/msx.py");
+    }
+</script>
+
+
+</body>
+</html>
